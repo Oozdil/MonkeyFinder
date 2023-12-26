@@ -1,0 +1,65 @@
+﻿<Window x:Class="MonkeyFinder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        xmlns:local="clr-namespace:MonkeyFinder"
+        Title="MainWindow" 
+         ResizeMode="CanResizeWithGrip"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Height="600" Width="800" Background="Black"
+        MouseLeftButtonDown="WindowMouseLeftButtonDown">
+
+
+
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="500" 
+                   Margin="10,0,0,0" Stroke="Black" 
+                   VerticalAlignment="Center" Width="300" 
+                   Fill="Yellow" RadiusX="16.5" RadiusY="16.5"/>
+        <StackPanel Margin="35" HorizontalAlignment="Left">
+            <Label Content="Monkey Finder" Margin="26,18,0,0" FontSize="20" FontWeight="Bold"/>
+            <ListView Height="400" Width="250" 
+                      Background="{x:Null}"
+                      BorderBrush="{x:Null}"
+                      Padding="5">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Green" />
+                                <Setter Property="BorderThickness" Value="1" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListView.ItemContainerStyle>
+
+
+
+                <local:MonkeyUserControl Width="200" Height="57" MonkeyName="Mahid Ahmed" 
+                                         Location="Project Manager" Image="https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/mandrill.jpg" Margin="5,5,0,5"></local:MonkeyUserControl>
+                <local:MonkeyUserControl Width="200" Height="57" MonkeyName="Daniel Kart" Location="HR Head" Image="\icons8-avatar-64 (1).png" Margin="5,5,0,5"></local:MonkeyUserControl>
+                <local:MonkeyUserControl Width="200" Height="57" MonkeyName="Elena Michel" Location="Developer" Image="\icons8-avatar-64 (2).png" Margin="5,5,0,5"></local:MonkeyUserControl>
+                <local:MonkeyUserControl Width="200" Height="57" MonkeyName="Danny Joe" Location="Test Manager" Image="\icons8-avatar-64 (3).png" Margin="5,5,0,5"></local:MonkeyUserControl>
+                <local:MonkeyUserControl Width="200" Height="57" MonkeyName="Sam Curren" Location="Scrum Master" Image="\icons8-avatar-64 (4).png" Margin="5,5,0,5"></local:MonkeyUserControl>
+                <local:MonkeyUserControl Width="200" Height="57" MonkeyName="Jacob Ekstard" Location="Lead Developer" Image="\icons8-avatar-64 (1).png" Margin="5,5,0,5"></local:MonkeyUserControl>
+            </ListView>
+
+
+        </StackPanel>
+
+        <Rectangle HorizontalAlignment="Left" Height="500" 
+            Margin="320,0,0,0" Stroke="Black" 
+            VerticalAlignment="Center" Width="450" 
+            Fill="Yellow" RadiusX="16.5" RadiusY="16.5"/>
+        <StackPanel Margin="345,0,0,0" HorizontalAlignment="Left">
+            <local:MonkeyDetailsUserControl Width="400" Height="450" Margin="0,70,0,0"/>
+
+
+
+        </StackPanel>
+
+    </Grid>
+</Window>
