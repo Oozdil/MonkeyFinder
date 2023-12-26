@@ -57,7 +57,7 @@
                                     <Label Content="{Binding Name}" Width="139" Height="30" FontSize="14"/>
                                     <Label Content="{Binding Location}" Width="139" Height="30" Margin="0,-8,0,0" FontSize="9" Foreground="#FF605C5C"/>
                                 </StackPanel>
-
+<!--Test-->
                             </StackPanel>
                         </Grid>
 
