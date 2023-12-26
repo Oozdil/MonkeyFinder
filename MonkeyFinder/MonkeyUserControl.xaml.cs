@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MonkeyFinder.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,5 +29,6 @@ namespace MonkeyFinder
         public string Image { get; set; }
         public string MonkeyName { get; set; }
         public string Location { get; set; }
+        public Monkey MyMonkey { get; set; }
     }
 }

@@ -21,7 +21,7 @@ namespace MonkeyFinder
             InitializeComponent();
         }
         private void WindowMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
+        {            
             DragMove();
         }
     }
